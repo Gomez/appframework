@@ -81,7 +81,7 @@ angular.module('OC').factory '_Request', ->
 				.success (data, status, headers, config) =>
 
 					# publish data to models
-					for name, value of data.data
+					for name, value of data
 						@_publisher.publishDataTo(value, name)
 
 					defaultData.onSuccess(data, status, headers, config)

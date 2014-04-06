@@ -109,13 +109,13 @@ describe 'ocClickSlideToggle', ->
 
 		options =
 			selector: '#b'
-			callback: =>
+			callback: ->
 				callback()
 		@setOptions(options)
 
 		options =
 			selector: '#c'
-			callback: =>
+			callback: ->
 				callback()
 		@setOptions(options)
 

@@ -255,10 +255,11 @@ abstract class Mapper {
 		$result = $this->execute($sql, $params, $limit, $offset);
 
 		$entities = array();
+		
 		while($row = $result->fetchRow()){
-			$entity = $this->mapRowToEntity($row);
-			array_push($entities, $entity);
+			$entities[] = $this->mapRowToEntity($row);
 		}
+
 		return $entities;
 	}
 

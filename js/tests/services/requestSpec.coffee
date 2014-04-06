@@ -124,8 +124,7 @@ describe '_Request', ->
 
 	it 'should call publisher', =>
 		fromServer =
-			data:
-				files: ['data']
+			files: ['data']
 
 		publisher =
 			publishDataTo: jasmine.createSpy('publisher')
@@ -144,7 +143,7 @@ describe '_Request', ->
 		req.request(null)
 
 		expect(publisher.publishDataTo).toHaveBeenCalledWith(
-			fromServer.data.files,
+			fromServer.files,
 			'files'
 		)
 
