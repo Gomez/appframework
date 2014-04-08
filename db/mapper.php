@@ -52,6 +52,8 @@ abstract class Mapper {
 		// cache it here for later use since reflection is slow
 		if($entityClass === null) {
 			$this->entityClass = str_replace('Mapper', '', get_class($this));
+		} else {
+			$this->entityClass = $entityClass;
 		}
 	}
 
